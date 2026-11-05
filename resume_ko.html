@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>최종인 — 이력서</title>
+<style>
+  @page { size: A4; margin: 0.5in 0.6in; }
+  body { font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 9.6pt; color: #111; line-height: 1.4; margin: 0; word-break: keep-all; }
+  h1 { text-align: center; font-size: 20pt; margin: 0; letter-spacing: 0.08em; }
+  h1 small { font-size: 11pt; font-weight: 500; color: #555; letter-spacing: 0; margin-left: 6pt; }
+  .contact { text-align: center; color: #444; font-size: 9.6pt; margin: 4pt 0 10pt; }
+  .contact a { color: inherit; text-decoration: none; }
+  h2 { font-size: 12pt; margin: 9pt 0 3pt; padding-bottom: 2pt; border-bottom: 1px solid #111; }
+  .row { display: flex; justify-content: space-between; font-weight: bold; }
+  .sub { display: flex; justify-content: space-between; color: #555; }
+  ul { margin: 2pt 0 4pt; padding-left: 16pt; }
+  li { margin-bottom: 1.5pt; }
+  p { margin: 1.5pt 0; }
+  .item { margin-bottom: 6pt; }
+  table.info { width: 100%; border-collapse: collapse; }
+  table.info td { padding: 1.5pt 0; vertical-align: top; }
+  table.info td.k { width: 13%; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>최종인<small>Jongin Choi</small></h1>
+<div class="contact">서울 | <a href="mailto:jic.jonginchoi@gmail.com">jic.jonginchoi@gmail.com</a> | <a href="https://github.com/nopgae">github.com/nopgae</a> | <a href="https://jonginchoi.vercel.app">jonginchoi.vercel.app</a></div>
+
+<h2>요약</h2>
+<p>Penn State 응용데이터과학 전공(2025.05 졸업). Python으로 데이터를 모으고, 모델 결과를 비교·검증하고, 반복 업무를 자동화합니다. 연구보조원으로 Reddit 이미지 40만 건 규모의 감정 이해 벤치마크 FeelReel 연구를 지원했습니다. 미국에서 고교·대학을 마친 13년 경험으로 한국어와 영어 모두 원어민 수준입니다.</p>
+
+<h2>경력사항</h2>
+<div class="item">
+  <div class="row"><span>연구보조원 (Research Assistant) — 감정 이해 데이터셋 FeelReel</span><span>2024.06 ~ 2025.03</span></div>
+  <div class="sub"><span>Penn State Data Science Lab (Prof. Sharon Hwang) · IST 495 인턴십 학점 연계</span><span>미국 University Park, PA</span></div>
+  <ul>
+    <li>Reddit 이미지 40만 건 이상·댓글 500만 건 이상 규모의 감정 이해 벤치마크 FeelReel의 후속 단계 연구 지원 (이전 버전 CVPR 2024 제출)</li>
+    <li>프로젝트 데이터 수집 파이프라인을 통해 Reddit 이미지 게시물과 댓글을 수집·정리</li>
+    <li>MTurk 설문(HIT) 페이지를 제작하고, 이를 통해 데이터셋 감정 주석에 대한 사람 평가(human evaluation) 응답 수집</li>
+  </ul>
+</div>
+
+<h2>프로젝트</h2>
+<div class="item">
+  <div class="row"><span>FeelReel-Mini · 개인 재구현</span><span>2026.07 ~ 2026.10</span></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/feelreel-mini" style="color:inherit;text-decoration:none">github.com/nopgae/feelreel-mini</a></span><span>PyTorch, Hugging Face, PRAW, LLaVA(Ollama), matplotlib</span></div>
+  <ul>
+    <li>연구실 FeelReel 데이터 파이프라인을 공개 도구로 소규모 재구현: Reddit 이미지 게시물·댓글 수집 → GoEmotions(RoBERTa, 28개 감정) 의사 라벨링 → LLaVA 7B로 감정을 일으킨 이미지 요소 추출</li>
+    <li>이미지 중심 커뮤니티 8곳의 감정 분포 시각화: 풍경·목공 커뮤니티는 감탄·놀람, 반려동물 커뮤니티는 기쁨 비중이 높음</li>
+    <li>연구실 코드·데이터와 별개인 개인 프로젝트(원본 데이터셋은 비공개)</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="row"><span>의료 진료기록 다중 분류 모델 — Penn State DS 310</span><span>2024 가을</span></div>
+  <ul>
+    <li>진료기록을 6개 진료과로 분류, TF-IDF(1~3그램)와 문서 길이 변수로 최종 weighted F1 0.807 달성</li>
+    <li>XGBoost를 5-fold 교차검증으로 54개 조합(270회) 튜닝했으나 로지스틱 회귀가 더 우수(F1 0.763 vs 0.711)함을 확인하고, 원인을 희소(sparse) 피처 구조에서 찾음</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="row"><span>Reddit 감성 분석 파이프라인 — 개인 (github.com/nopgae/reddit-sentiment-roberta)</span><span>PyTorch · Hugging Face</span></div>
+  <ul>
+    <li>Reddit JSON API 수집 → 사전학습 RoBERTa 배치 추론 → 집계·시각화까지 엔드투엔드로 단독 구축·공개</li>
+    <li>이커머스·물류·공급망 7개 커뮤니티 게시물 563건 분석, 커뮤니티별 baseline 차이 정량화(r/supplychain +0.11 vs r/ecommerce −0.31)</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="row"><span>웹 데이터 조회 자동화 — 개인</span><span>2026.02 ~ 2026.05</span></div>
+  <ul>
+    <li>웹 서비스의 요청 구조를 분석하고, 수작업으로 반복하던 조회 과정을 Playwright 스크립트 하나로 대체</li>
+  </ul>
+</div>
+
+<h2>학력</h2>
+<div class="item">
+  <div class="row"><span>Pennsylvania State University (미국) — 응용데이터과학 학사</span><span>2025.05 졸업</span></div>
+  <p>주요 이수: 머신러닝 및 데이터분석(DS 310), 데이터 통합(DS 320), 응용 데이터사이언스(DS 340W), 빅데이터 프로그래밍 모델(DS 410), 이산수학(CMPSC 360), 네트워크 및 통신(IST 220)</p>
+</div>
+<div class="item">
+  <div class="row"><span>Maur Hill-Mount Academy (미국)</span><span>2015.05 졸업</span></div>
+</div>
+
+<h2>기술 스택</h2>
+<table class="info">
+  <tr><td class="k">프로그래밍</td><td>Python, SQL (조회·집계·조인), R, JavaScript</td></tr>
+  <tr><td class="k">데이터·ML</td><td>pandas, NumPy, scikit-learn, XGBoost, PyTorch, Hugging Face Transformers, 교차검증, 불균형 데이터 처리</td></tr>
+  <tr><td class="k">자동화·웹</td><td>Playwright, Selenium, Beautiful Soup, HTTP 요청 구조 분석</td></tr>
+  <tr><td class="k">도구</td><td>Git, Linux, Docker, Jupyter, MySQL</td></tr>
+</table>
+
+<h2>기타</h2>
+<table class="info">
+  <tr><td class="k">어학</td><td>한국어·영어 원어민 수준, TOEIC Speaking 160 (AL)</td></tr>
+  <tr><td class="k">병역</td><td>군필 (육군, 2017.08 ~ 2018.06)</td></tr>
+</table>
+</body>
+</html>

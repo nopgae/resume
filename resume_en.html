@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Jongin Choi — Resume</title>
+<style>
+  @page { size: Letter; margin: 0.45in 0.6in; }
+  body { font-family: Helvetica, Arial, sans-serif; font-size: 9.6pt; color: #111; line-height: 1.25; margin: 0; }
+  h1 { text-align: center; font-size: 20pt; margin: 0; letter-spacing: 0.02em; }
+  .contact { text-align: center; color: #444; font-size: 10pt; margin: 4pt 0 10pt; }
+  .contact a { color: inherit; text-decoration: none; }
+  h2 { font-size: 12pt; margin: 8pt 0 3pt; padding-bottom: 2pt; border-bottom: 1px solid #111; }
+  .row { display: flex; justify-content: space-between; font-weight: bold; }
+  .row i { font-weight: bold; }
+  .sub { display: flex; justify-content: space-between; color: #555; font-style: italic; }
+  ul { margin: 2pt 0 4pt; padding-left: 16pt; }
+  li { margin-bottom: 1.5pt; }
+  p { margin: 1.5pt 0; }
+  .item { margin-bottom: 5pt; }
+</style>
+</head>
+<body>
+<h1>JONGIN CHOI</h1>
+<div class="contact">Seoul, Korea | <a href="mailto:jic.jonginchoi@gmail.com">jic.jonginchoi@gmail.com</a> | <a href="https://github.com/nopgae">github.com/nopgae</a> | <a href="https://jonginchoi.vercel.app">jonginchoi.vercel.app</a></div>
+
+<h2>EDUCATION</h2>
+<div class="item">
+  <div class="row"><span>Pennsylvania State University</span><i>May 2025</i></div>
+  <div class="sub"><span>Bachelor of Science, Applied Data Sciences</span><span>University Park, PA</span></div>
+  <ul><li>Relevant Coursework: Data Analysis, Software Engineering, Statistics, Algorithms, Artificial Intelligence, Machine Learning</li></ul>
+</div>
+
+<h2>TECHNICAL SKILLS</h2>
+<p><b>Languages:</b> Python, SQL, R, JavaScript</p>
+<p><b>Data &amp; ML:</b> Pandas, NumPy, Scikit-learn, PyTorch, HuggingFace Transformers, Jupyter, Spark</p>
+<p><b>Web &amp; Scraping:</b> Beautiful Soup, Selenium, HTML/CSS</p>
+<p><b>Databases:</b> MySQL, MongoDB</p>
+<p><b>Tools:</b> Git, Linux, Docker</p>
+
+<h2>EXPERIENCE</h2>
+<div class="item">
+  <div class="row"><span>Research Assistant — Multimodal Emotion Dataset (FeelReel)</span><i>Jun 2024 – Mar 2025</i></div>
+  <div class="sub"><span>Pennsylvania State University, Data Science Lab (Prof. Sharon Hwang) · IST 495 internship credit</span><span>University Park, PA</span></div>
+  <ul>
+    <li>Supported the follow-up phase of FeelReel, a lab benchmark of 400K+ Reddit images and 5M+ comments for emotion understanding (earlier version submitted to CVPR 2024).</li>
+    <li>Sourced and organized Reddit image posts and comments through the project's data collection pipeline, keeping datasets structured and reproducible.</li>
+    <li>Built the MTurk survey (HIT) page and collected human evaluation responses on the dataset's emotion annotations through it.</li>
+  </ul>
+</div>
+
+<h2>PROJECTS</h2>
+<div class="item">
+  <div class="row"><span>FeelReel-Mini — Personal recreation</span><i>Jul – Oct 2026</i></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/feelreel-mini" style="color:inherit;text-decoration:none">github.com/nopgae/feelreel-mini</a></span><span>PyTorch, Hugging Face, PRAW, LLaVA (Ollama), matplotlib</span></div>
+  <ul>
+    <li>Rebuilt the FeelReel data pipeline at small scale with public tools: Reddit image posts and comments, GoEmotions pseudo-labels (RoBERTa, 28 emotions), and LLaVA 7B asked what in each image triggered the emotion.</li>
+    <li>Charted emotion distributions across 8 image-heavy subreddits: scenery and woodworking communities leaned toward admiration and surprise, pet communities toward joy.</li>
+    <li>Separate from the lab's code and data, which are not public.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="row"><span>Medical Transcription Classifier — Penn State DS 310</span><i>Fall 2024</i></div>
+  <ul>
+    <li>Classified medical transcriptions into 6 specialties using TF-IDF (1–3 grams) plus document-length features; final weighted F1 0.807.</li>
+    <li>Tuned XGBoost over 54 configurations with 5-fold CV (270 fits), then showed untuned logistic regression still won (F1 0.763 vs 0.711) and traced it to sparse features.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="row"><span>Reddit Sentiment Pipeline — Personal</span><i></i></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/reddit-sentiment-roberta" style="color:inherit;text-decoration:none">github.com/nopgae/reddit-sentiment-roberta</a></span><span>PyTorch, Hugging Face, pandas, Plotly</span></div>
+  <ul>
+    <li>Built an end-to-end pipeline alone: Reddit JSON API collection, batched inference with a pre-trained RoBERTa sentiment model, aggregation and charts.</li>
+    <li>Scored 563 posts across 7 e-commerce, logistics and supply-chain subreddits; quantified community baselines (r/supplychain +0.11 vs r/ecommerce −0.31).</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="row"><span>Crime &amp; Weather Data Analysis — Chicago</span><i>Sep 2024</i></div>
+  <ul>
+    <li>Analyzed correlations between crime rates and weather conditions by integrating City of Chicago crime records with daily weather data.</li>
+    <li>Used SQL to merge heterogeneous datasets and performed data cleaning to ensure analytical consistency.</li>
+  </ul>
+</div>
+
+<h2>ADDITIONAL INFORMATION</h2>
+<p><b>Languages:</b> Fluent in English and Korean (bilingual); TOEIC Speaking 160 (AL)</p>
+<p><b>Interests:</b> Web security CTF (webhacking.kr), Boston Dynamics Spot robotics, Korean stock market analysis</p>
+</body>
+</html>
