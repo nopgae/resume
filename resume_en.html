@@ -77,7 +77,7 @@
   <div class="sub"><span><a href="https://github.com/nopgae/starbucks-parking-finder" style="color:inherit;text-decoration:none">github.com/nopgae/starbucks-parking-finder</a></span><span>TypeScript, Playwright, Python, GitHub Actions</span></div>
   <ul>
     <li>Used Playwright to find the JSON request behind the store locator, then called it directly to collect parking notes for all 2,212 stores (2,199 with a note) instead of checking each store page by hand.</li>
-    <li>Wrote a rule-based parser that turns free-text notes into free / free-with-purchase / paid / unavailable; accuracy on a 50-note sample rose from 84% to 94%, with 21 unit tests run on every push by GitHub Actions.</li>
+    <li>Wrote a rule-based parser that turns free-text notes into free / free-with-purchase / paid / unavailable; accuracy 82%→92% on a 50-note sample (AI-labeled), with 21 unit tests run on every push by GitHub Actions.</li>
     <li>Packaged per-region data files and a search script as a skill so AI assistants answer from each store's own note.</li>
   </ul>
 </div>
