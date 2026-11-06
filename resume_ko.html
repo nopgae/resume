@@ -5,7 +5,7 @@
 <title>최종인 — 이력서</title>
 <style>
   @page { size: A4; margin: 0.5in 0.6in; }
-  body { font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 9.6pt; color: #111; line-height: 1.4; margin: 0; word-break: keep-all; }
+  body { font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 9.6pt; color: #111; line-height: 1.36; margin: 0; word-break: keep-all; }
   h1 { text-align: center; font-size: 20pt; margin: 0; letter-spacing: 0.08em; }
   h1 small { font-size: 11pt; font-weight: 500; color: #555; letter-spacing: 0; margin-left: 6pt; }
   .contact { text-align: center; color: #444; font-size: 9.6pt; margin: 4pt 0 10pt; }
@@ -16,7 +16,7 @@
   ul { margin: 2pt 0 4pt; padding-left: 16pt; }
   li { margin-bottom: 1.5pt; }
   p { margin: 1.5pt 0; }
-  .item { margin-bottom: 6pt; }
+  .item { margin-bottom: 4pt; }
   table.info { width: 100%; border-collapse: collapse; }
   table.info td { padding: 1.5pt 0; vertical-align: top; }
   table.info td.k { width: 13%; font-weight: bold; }
@@ -34,7 +34,7 @@
   <div class="row"><span>연구보조원 (Research Assistant) — 감정 이해 데이터셋 FeelReel</span><span>2024.06 ~ 2025.03</span></div>
   <div class="sub"><span>Penn State Data Science Lab (Prof. Sharon Hwang) · IST 495 인턴십 학점 연계</span><span>미국 University Park, PA</span></div>
   <ul>
-    <li>Reddit 이미지 40만 건 이상·댓글 500만 건 이상 규모의 감정 이해 벤치마크 FeelReel의 후속 단계 연구 지원 (이전 버전 CVPR 2024 제출)</li>
+    <li>Reddit 이미지 40만 건·댓글 500만 건 이상 규모의 감정 이해 벤치마크 FeelReel의 후속 연구 지원 (이전 버전 CVPR 2024 제출)</li>
     <li>프로젝트 데이터 수집 파이프라인을 통해 Reddit 이미지 게시물과 댓글을 수집·정리</li>
     <li>MTurk 설문(HIT) 페이지를 제작하고, 이를 통해 데이터셋 감정 주석에 대한 사람 평가(human evaluation) 응답 수집</li>
   </ul>
@@ -61,13 +61,15 @@
   <div class="row"><span>Reddit 감성 분석 파이프라인 — 개인 (github.com/nopgae/reddit-sentiment-roberta)</span><span>PyTorch · Hugging Face</span></div>
   <ul>
     <li>Reddit JSON API 수집 → 사전학습 RoBERTa 배치 추론 → 집계·시각화까지 엔드투엔드로 단독 구축·공개</li>
-    <li>이커머스·물류·공급망 7개 커뮤니티 게시물 563건 분석, 커뮤니티별 baseline 차이 정량화(r/supplychain +0.11 vs r/ecommerce −0.31)</li>
+    <li>이커머스·물류·공급망 7개 커뮤니티 게시물 563건 분석, 커뮤니티별 baseline 정량화(r/supplychain +0.11 vs r/ecommerce −0.31)</li>
   </ul>
 </div>
 <div class="item">
-  <div class="row"><span>웹 데이터 조회 자동화 — 개인</span><span>2026.02 ~ 2026.05</span></div>
+  <div class="row"><span>스타벅스 매장 주차 검색 서비스 · 개인</span><span>2026.04 (테스트·CI 2026.10)</span></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/starbucks-parking-finder" style="color:inherit;text-decoration:none">github.com/nopgae/starbucks-parking-finder</a></span><span>TypeScript, Playwright, Fastify, PostgreSQL, GitHub Actions</span></div>
   <ul>
-    <li>웹 서비스의 요청 구조를 분석하고, 수작업으로 반복하던 조회 과정을 Playwright 스크립트 하나로 대체</li>
+    <li>매장 찾기 페이지가 호출하는 데이터 요청을 Playwright로 분석하고, 그 요청을 직접 호출해 매장마다 들어가 확인해야 했던 주차 정보를 전국 2,131개 매장에서 일괄 수집 (주차 정보 보유 1,514곳)</li>
+    <li>자유 문장 주차 안내를 무료/유료/구매 시 무료/불가와 대수·위치로 바꾸는 규칙 파서, "강남역 두 시간 이상 무료 주차" 같은 문장을 조건으로 바꾸는 검색 파서 구현 → API·지도 화면 배포, 두 파서 단위 테스트는 push마다 GitHub Actions로 자동 실행</li>
   </ul>
 </div>
 
@@ -82,9 +84,9 @@
 
 <h2>기술 스택</h2>
 <table class="info">
-  <tr><td class="k">프로그래밍</td><td>Python, SQL (조회·집계·조인), R, JavaScript</td></tr>
+  <tr><td class="k">프로그래밍</td><td>Python, SQL (조회·집계·조인), R, JavaScript, TypeScript</td></tr>
   <tr><td class="k">데이터·ML</td><td>pandas, NumPy, scikit-learn, XGBoost, PyTorch, Hugging Face Transformers, 교차검증, 불균형 데이터 처리</td></tr>
-  <tr><td class="k">자동화·웹</td><td>Playwright, Selenium, Beautiful Soup, HTTP 요청 구조 분석</td></tr>
+  <tr><td class="k">자동화·웹</td><td>Playwright, Beautiful Soup, HTTP 요청 구조 분석</td></tr>
   <tr><td class="k">도구</td><td>Git, Linux, Docker, Jupyter, MySQL</td></tr>
 </table>
 
