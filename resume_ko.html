@@ -10,7 +10,7 @@
   h1 small { font-size: 11pt; font-weight: 500; color: #555; letter-spacing: 0; margin-left: 6pt; }
   .contact { text-align: center; color: #444; font-size: 9.6pt; margin: 4pt 0 10pt; }
   .contact a { color: inherit; text-decoration: none; }
-  h2 { font-size: 12pt; margin: 9pt 0 3pt; padding-bottom: 2pt; border-bottom: 1px solid #111; }
+  h2 { font-size: 12pt; margin: 7pt 0 3pt; padding-bottom: 2pt; border-bottom: 1px solid #111; }
   .row { display: flex; justify-content: space-between; font-weight: bold; }
   .sub { display: flex; justify-content: space-between; color: #555; }
   ul { margin: 2pt 0 4pt; padding-left: 16pt; }
@@ -65,11 +65,12 @@
   </ul>
 </div>
 <div class="item">
-  <div class="row"><span>스타벅스 매장 주차 검색 서비스 · 개인</span><span>2026.04 (테스트·CI 2026.10)</span></div>
-  <div class="sub"><span><a href="https://github.com/nopgae/starbucks-parking-finder" style="color:inherit;text-decoration:none">github.com/nopgae/starbucks-parking-finder</a></span><span>TypeScript, Playwright, Fastify, PostgreSQL, GitHub Actions</span></div>
+  <div class="row"><span>스타벅스 매장 주차 검색 서비스 · 개인</span><span>2026.04 (개선 2026.10~11)</span></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/starbucks-parking-finder" style="color:inherit;text-decoration:none">github.com/nopgae/starbucks-parking-finder</a></span><span>TypeScript, Playwright, Python, GitHub Actions</span></div>
   <ul>
-    <li>매장 찾기 페이지가 호출하는 데이터 요청을 Playwright로 분석하고, 그 요청을 직접 호출해 매장마다 들어가 확인해야 했던 주차 정보를 전국 2,131개 매장에서 일괄 수집 (주차 정보 보유 1,514곳)</li>
-    <li>자유 문장 주차 안내를 무료/유료/구매 시 무료/불가와 대수·위치로 바꾸는 규칙 파서, "강남역 두 시간 이상 무료 주차" 같은 문장을 조건으로 바꾸는 검색 파서 구현 → API·지도 화면 배포, 두 파서 단위 테스트는 push마다 GitHub Actions로 자동 실행</li>
+    <li>매장 찾기 페이지가 호출하는 데이터 요청을 Playwright로 분석하고, 그 요청을 직접 호출해 매장마다 들어가 확인해야 했던 주차 안내를 전국 2,212개 매장에서 일괄 수집 (안내 보유 2,199곳)</li>
+    <li>자유 문장 안내를 무료·구매 시 무료·유료·불가로 나누는 규칙 파서: 표본 50개 기준 정확도 84%→94%, 테스트 21개·CI</li>
+    <li>AI 어시스턴트가 매장별 주차 안내 원문을 근거로 답하도록 지역별 데이터와 검색 스크립트를 스킬로 묶어 제공</li>
   </ul>
 </div>
 

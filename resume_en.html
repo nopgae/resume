@@ -73,11 +73,12 @@
   </ul>
 </div>
 <div class="item">
-  <div class="row"><span>Starbucks Korea Parking Finder — Personal</span><i>Apr 2026 (tests/CI Oct 2026)</i></div>
-  <div class="sub"><span><a href="https://github.com/nopgae/starbucks-parking-finder" style="color:inherit;text-decoration:none">github.com/nopgae/starbucks-parking-finder</a></span><span>TypeScript, Playwright, Fastify, PostgreSQL, GitHub Actions</span></div>
+  <div class="row"><span>Starbucks Korea Parking Finder — Personal</span><i>Apr 2026 (updates Oct–Nov 2026)</i></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/starbucks-parking-finder" style="color:inherit;text-decoration:none">github.com/nopgae/starbucks-parking-finder</a></span><span>TypeScript, Playwright, Python, GitHub Actions</span></div>
   <ul>
-    <li>Used Playwright to find the JSON request behind the store locator, then called it directly to collect parking info for all 2,131 stores (1,514 with parking details) instead of checking each store page by hand.</li>
-    <li>Wrote rule-based parsers that turn free-text parking notes into free / paid / free-with-purchase / none plus capacity and location, and turn queries like "free parking 2+ hours near Gangnam Station" into filters; served via a Fastify API and map UI, with parser unit tests run on every push by GitHub Actions.</li>
+    <li>Used Playwright to find the JSON request behind the store locator, then called it directly to collect parking notes for all 2,212 stores (2,199 with a note) instead of checking each store page by hand.</li>
+    <li>Wrote a rule-based parser that turns free-text notes into free / free-with-purchase / paid / unavailable; accuracy on a 50-note sample rose from 84% to 94%, with 21 unit tests run on every push by GitHub Actions.</li>
+    <li>Packaged per-region data files and a search script as a skill so AI assistants answer from each store's own note.</li>
   </ul>
 </div>
 
