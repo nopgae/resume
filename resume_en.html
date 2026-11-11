@@ -29,6 +29,9 @@
   <div class="sub"><span>Bachelor of Science, Applied Data Sciences</span><span>University Park, PA</span></div>
   <ul><li>Coursework: Data Analysis, Software Engineering, Statistics, Algorithms, Artificial Intelligence, Machine Learning</li></ul>
 </div>
+<div class="item">
+  <div class="row"><span>SeSAC (Seoul Youth Job Academy) — Microsoft AI &amp; Cloud Program, Cohort 5 (600 hours)</span><i>Oct 2026 – Feb 2027 (in progress)</i></div>
+</div>
 
 <h2>TECHNICAL SKILLS</h2>
 <p><b>Languages:</b> Python, SQL, R, JavaScript, TypeScript</p>
@@ -49,11 +52,11 @@
 
 <h2>PROJECTS</h2>
 <div class="item">
-  <div class="row"><span>FeelReel-Mini — Personal recreation</span><i>Jul – Oct 2026</i></div>
-  <div class="sub"><span><a href="https://github.com/nopgae/feelreel-mini" style="color:inherit;text-decoration:none">github.com/nopgae/feelreel-mini</a></span><span>PyTorch, Hugging Face, PRAW, LLaVA (Ollama), matplotlib</span></div>
+  <div class="row"><span>Reddit Sentiment &amp; Emotion Pipeline — Personal</span><i>Aug 2025 – Oct 2026</i></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/reddit-sentiment-roberta" style="color:inherit;text-decoration:none">github.com/nopgae/reddit-sentiment-roberta</a> · <a href="https://github.com/nopgae/feelreel-mini" style="color:inherit;text-decoration:none">feelreel-mini</a></span><span>PyTorch, Hugging Face, PRAW, LLaVA, pandas, matplotlib</span></div>
   <ul>
-    <li>Rebuilt the FeelReel data pipeline at small scale with public tools: Reddit image posts and comments, GoEmotions pseudo-labels (RoBERTa, 28 emotions), and LLaVA 7B asked what in each image triggered the emotion.</li>
-    <li>Charted emotion distributions across 8 image-heavy subreddits: scenery and woodworking communities leaned toward admiration and surprise, pet communities toward joy.</li>
+    <li>Built an end-to-end pipeline alone: Reddit JSON API collection, batched inference with a pre-trained RoBERTa sentiment model, aggregation and charts; scored 563 posts across 7 e-commerce, logistics and supply-chain subreddits (r/supplychain +0.11 vs r/ecommerce −0.31).</li>
+    <li>Extended it to image posts by rebuilding the FeelReel data pipeline at small scale with public tools: GoEmotions labels (RoBERTa, 28 emotions) and LLaVA 7B asked what in each image triggered the emotion; charted emotion distributions across 8 image-heavy subreddits.</li>
     <li>Separate from the lab's code and data, which are not public.</li>
   </ul>
 </div>
@@ -62,14 +65,6 @@
   <ul>
     <li>Classified medical transcriptions into 6 specialties with TF-IDF (1–3 grams) and document-length features; weighted F1 0.807.</li>
     <li>Tuned XGBoost over 54 configurations with 5-fold CV (270 fits), then showed untuned logistic regression still won (F1 0.763 vs 0.711) and traced it to sparse features.</li>
-  </ul>
-</div>
-<div class="item">
-  <div class="row"><span>Reddit Sentiment Pipeline — Personal</span><i>Aug 2025 – Mar 2026</i></div>
-  <div class="sub"><span><a href="https://github.com/nopgae/reddit-sentiment-roberta" style="color:inherit;text-decoration:none">github.com/nopgae/reddit-sentiment-roberta</a></span><span>PyTorch, Hugging Face, pandas, Plotly</span></div>
-  <ul>
-    <li>Built an end-to-end pipeline alone: Reddit JSON API collection, batched inference with a pre-trained RoBERTa sentiment model, aggregation and charts.</li>
-    <li>Scored 563 posts across 7 e-commerce, logistics and supply-chain subreddits; quantified community baselines (r/supplychain +0.11 vs r/ecommerce −0.31).</li>
   </ul>
 </div>
 <div class="item">

@@ -42,11 +42,11 @@
 
 <h2>프로젝트</h2>
 <div class="item">
-  <div class="row"><span>FeelReel-Mini · 개인 재구현</span><span>2026.07 ~ 2026.10</span></div>
-  <div class="sub"><span><a href="https://github.com/nopgae/feelreel-mini" style="color:inherit;text-decoration:none">github.com/nopgae/feelreel-mini</a></span><span>PyTorch, Hugging Face, PRAW, LLaVA(Ollama), matplotlib</span></div>
+  <div class="row"><span>Reddit 감성·감정 분석 파이프라인 · 개인</span><span>2025.08 ~ 2026.10</span></div>
+  <div class="sub"><span><a href="https://github.com/nopgae/reddit-sentiment-roberta" style="color:inherit;text-decoration:none">github.com/nopgae/reddit-sentiment-roberta</a> · <a href="https://github.com/nopgae/feelreel-mini" style="color:inherit;text-decoration:none">feelreel-mini</a></span><span>PyTorch, Hugging Face, PRAW, LLaVA, pandas, matplotlib</span></div>
   <ul>
-    <li>연구실 FeelReel 데이터 파이프라인을 공개 도구로 소규모 재구현: Reddit 이미지 게시물·댓글 수집 → GoEmotions(RoBERTa, 28개 감정) 의사 라벨링 → LLaVA 7B로 감정을 일으킨 이미지 요소 추출</li>
-    <li>이미지 중심 커뮤니티 8곳의 감정 분포 시각화: 풍경·목공 커뮤니티는 감탄·놀람, 반려동물 커뮤니티는 기쁨 비중이 높음</li>
+    <li>Reddit JSON API 수집 → 사전학습 RoBERTa 배치 추론 → 집계·시각화까지 단독 구축·공개: 이커머스·물류·공급망 7개 커뮤니티 게시물 563건 분석, 커뮤니티별 평균 감성 점수 비교(r/supplychain +0.11 vs r/ecommerce −0.31)</li>
+    <li>이미지 게시물로 확장해 연구실 FeelReel 파이프라인을 공개 도구로 소규모 재구현: 게시물·댓글 수집 → GoEmotions(RoBERTa, 28개 감정)로 자동 라벨링 → LLaVA 7B로 감정을 일으킨 이미지 요소 추출, 이미지 커뮤니티 8곳의 감정 분포 시각화</li>
     <li>연구실 코드·데이터와 별개인 개인 프로젝트(원본 데이터셋은 비공개)</li>
   </ul>
 </div>
@@ -55,13 +55,6 @@
   <ul>
     <li>진료기록을 6개 진료과로 분류, TF-IDF(1~3그램)와 문서 길이 변수로 최종 weighted F1 0.807 달성</li>
     <li>XGBoost를 5-fold 교차검증으로 54개 조합(270회) 튜닝했으나 로지스틱 회귀가 더 우수(F1 0.763 vs 0.711)함을 확인하고, 원인을 희소(sparse) 피처 구조에서 찾음</li>
-  </ul>
-</div>
-<div class="item">
-  <div class="row"><span>Reddit 감성 분석 파이프라인 — 개인 (github.com/nopgae/reddit-sentiment-roberta)</span><span>PyTorch · Hugging Face</span></div>
-  <ul>
-    <li>Reddit JSON API 수집 → 사전학습 RoBERTa 배치 추론 → 집계·시각화까지 엔드투엔드로 단독 구축·공개</li>
-    <li>이커머스·물류·공급망 7개 커뮤니티 게시물 563건 분석, 커뮤니티별 baseline 정량화(r/supplychain +0.11 vs r/ecommerce −0.31)</li>
   </ul>
 </div>
 <div class="item">
@@ -75,6 +68,9 @@
 </div>
 
 <h2>학력</h2>
+<div class="item">
+  <div class="row"><span>서울시 청년취업사관학교(SeSAC) 마포 — Microsoft AI·클라우드 과정 5기 (600시간)</span><span>2026.10 ~ 2027.02 (수강 중)</span></div>
+</div>
 <div class="item">
   <div class="row"><span>Pennsylvania State University (미국) — 응용데이터과학 학사</span><span>2025.05 졸업</span></div>
   <p>주요 이수: 머신러닝 및 데이터분석(DS 310), 데이터 통합(DS 320), 응용 데이터사이언스(DS 340W), 빅데이터 프로그래밍 모델(DS 410), 이산수학(CMPSC 360), 네트워크 및 통신(IST 220)</p>
